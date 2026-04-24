@@ -1,0 +1,21 @@
+equipments = {
+        ukr_fpvdrunes_equipment = {
+        year = 2020
+        archetype = fpv_drunnost_equipment
+        priority = 10
+        visual_level = 1
+
+        #Misc Abilities
+        reliability = 0.9
+
+        #Defensive Abilities
+        soft_attack = 30.48
+        hard_attack = 69.52
+        ap_attack = 15
+
+        build_cost_ic = 0.01
+        resources = {
+            steel = 1
+        }
+    }
+}

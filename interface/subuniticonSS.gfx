@@ -1,0 +1,9 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_fpv_drunes_icon"
+		textureFile = "gfx/counters/fpv_team.png"
+		noOfFrames = 2
+	}
+	
+}

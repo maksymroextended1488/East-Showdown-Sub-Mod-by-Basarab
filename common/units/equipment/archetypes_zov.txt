@@ -1,0 +1,29 @@
+equipments = {
+	fpv_drunnost_equipment = {
+		year = 2020
+		is_archetype = yes
+		is_buildable = no
+		active = no
+
+		picture = archetype_infantry_equipment
+		type = infantry
+		group_by = archetype
+		interface_category = interface_category_land
+
+                #Misc Abilities
+                reliability = 0.9
+
+                #Defensive Abilities
+                soft_attack = 6.14
+                hard_attack = 7.04
+                ap_attack = 15
+                
+                #Space taken in convoy
+                lend_lease_cost = 1
+
+		build_cost_ic = 0.1
+		resources = {
+			steel = 1
+		}
+	}
+}
