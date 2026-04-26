@@ -9564,226 +9564,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = New_era_of_war
-		icon = New_era_of_war
-		prerequisite = {
-			focus = Army_modernization
-		}
-		x = -5
-		y = 1
-		relative_position_id = Army_modernization
-		cost = 0.5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus New_era_of_war"
-			add_equipment_to_stockpile = {
-				type = UKR_uav_recon_equipment_leleka
-				amount = 100
-			}
-			add_equipment_to_stockpile = {
-				type = UKR_uav_strike_equipment_gorlitsa
-				amount = 100
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = UKR_orders_for_tactical_drones
-		icon = GFX_UKR_orders_for_tactical_drones
-		prerequisite = {
-			focus = New_era_of_war
-		}
-		x = -1
-		y = 1
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-			set_country_flag = UKR_orders_for_tactical_drones
-
-			if = {
-				limit = { 
-					has_completed_focus = Underground_factories
-				}
-				add_equipment_to_stockpile = {
-					type = UKR_uav_strike_equipment_gorlitsa
-					amount = 200
-				}
-			}
-			 else = {
-				add_equipment_to_stockpile = {
-					type = UKR_uav_strike_equipment_gorlitsa
-					amount = 50
-				}		
-				custom_effect_tooltip = UKR_UKR_orders_for_tactical_drones_Dep_tt
-			}
-
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = UKR_orders_for_reconnaissance_drones
-		icon = GFX_UKR_orders_for_reconnaissance_drones
-		prerequisite = {
-			focus = New_era_of_war
-		}
-		x = 1
-		y = 1
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-			if = {
-				limit = { 
-					has_completed_focus = Underground_factories
-				}
-				add_equipment_to_stockpile = {
-					type = UKR_uav_recon_equipment_leleka
-					amount = 200
-				}
-			}
-			 else = {
-				add_equipment_to_stockpile = {
-					type = UKR_uav_recon_equipment_leleka
-					amount = 45
-				}		
-				custom_effect_tooltip = UKR_UKR_orders_for_tactical_drones_Dep_tt
-			}			
-			set_country_flag = UKR_orders_for_reconnaissance_drones
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = Bober
-		icon = Bober
-		prerequisite = {
-			focus = UKR_orders_for_tactical_drones
-		}
-		prerequisite = {
-			focus = UKR_orders_for_reconnaissance_drones
-		}
-		x = 0
-		y = 2
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus Bober"
-			custom_effect_tooltip = Bober_tt
-			hidden_effect = {
-				set_technology = {
-					missile_ukr_bober = 1
-				}
-				add_equipment_to_stockpile = {
-					type = ukr_guided_uav_bober
-					amount = 10
-				}
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = UKR_increase_national_UAV_production
-		icon = GFX_UKR_increase_national_UAV_production
-		prerequisite = {
-			focus = Bober
-		}
-		x = 2
-		y = 3
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-			add_ideas = {
-				UKR_increase_national_UAV_production
-			}
-		}
-		search_filters = {
-		}
-	}
-	focus = {
-		id = UKR_create_a_department_of_the_AFU_for_drones
-		icon = GFX_UKR_create_a_department_of_the_AFU_for_drones
-		prerequisite = {
-			focus = start_developing_an_analogue_of_shahed
-		}
-		x = 0
-		y = 4
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-			add_ideas = {
-				UKR_create_a_department_of_the_AFU_for_drones
-			}
-			hidden_effect = {
-				country_event = {
-					id = ukr_fpv.1
-					days = 14
-				}
-				country_event = {
-					id = ukr_fpv.2
-					days = 20
-				}
-				country_event = {
-					id = ukr_fpv.3
-					days = 25
-				}
-				country_event = {
-					id = ukr_fpv.4
-					days = 30
-				}
-			}			
-		}
-		search_filters = {
-		}
-	}
-	focus = {
-		id = start_developing_an_analogue_of_shahed
-		icon = start_developing_an_analogue_of_shahed
-		prerequisite = {
-			focus = Bober
-		}
-		x = 0
-		y = 3
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus start_developing_an_analogue_of_shahed"
-			custom_effect_tooltip = start_developing_an_analogue_of_shahed_tt
-			hidden_effect = {
-				set_technology = {
-					missile_ukr_rubaka = 1
-				}
-				add_equipment_to_stockpile = {
-					type = ukr_guided_uav_bober
-					amount = 10
-				}
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-		focus = {
-		id = UKR_smoking_gg
-		icon = GFX_UKR_smoking_gg
-		prerequisite = {
-			focus = start_developing_an_analogue_of_shahed
-		}
-		x = -2
-		y = 4
-		relative_position_id = New_era_of_war
-		cost = 0.5
-		completion_reward = {
-						
-		}
-		search_filters = {
-		}
-	}
-	focus = {
 		id = Start_production_of_long_range_missiles
 		icon = Start_production_of_long_range_missiles
 		prerequisite = {
@@ -10933,31 +10713,391 @@ focus_tree = {
 	focus = {
 		id = ukr_kontrnastup_2023
 		icon = GFX_UKR_Subsequent_mobilization_to_bureaucrats
+                	available = {
+			date > 2023.1.1
+		}
+
 		prerequisite = {
 			focus = UKR_Heading_for_Borders_1991
 		}
 		x = -3
-		y = 0
+		y = 1
 		relative_position_id = UKR_Heading_for_Borders_1991
 		cost = 0.5
 		completion_reward = {
-			if = {
-				limit = { 
-					has_completed_focus = Birth_of_the_military_industrial_complex_of_Ukraine
+			hidden_effect = {
+				set_technology = {
+					tech_fpv = 1
+					tech_fpv2 = 1
 				}
-				add_equipment_to_stockpile = {
-					type = ukr_fpvdrunes_equipment
-					amount = 50000
-				}
-			}
-			 else = {
-				add_equipment_to_stockpile = {
-					type = ukr_fpvdrunes_equipment
-					amount = 20000
-				}		
 			}			
 		}
 		search_filters = {
 		}
 	}
+	focus = {
+		id = New_era_of_war
+		icon = New_era_of_war
+		prerequisite = {
+			focus = ukr_kontrnastup_2023
+		}
+		x = 0
+		y = 3
+		relative_position_id = ukr_kontrnastup_2023
+		cost = 0.5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus New_era_of_war"
+			add_equipment_to_stockpile = {
+				type = UKR_uav_recon_equipment_leleka
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = UKR_uav_strike_equipment_gorlitsa
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+					type = ukr_fpvdrunes_equipment
+					amount = 100000
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = UKR_orders_for_tactical_drones
+		icon = GFX_UKR_orders_for_tactical_drones
+		prerequisite = {
+			focus = New_era_of_war
+		}
+		x = -1
+		y = 1
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+			set_country_flag = UKR_orders_for_tactical_drones
+
+			if = {
+				limit = { 
+					has_completed_focus = Underground_factories
+				}
+				add_equipment_to_stockpile = {
+					type = UKR_uav_strike_equipment_gorlitsa
+					amount = 200
+				}
+			}
+			 else = {
+				add_equipment_to_stockpile = {
+					type = UKR_uav_strike_equipment_gorlitsa
+					amount = 50
+				}		
+				custom_effect_tooltip = UKR_UKR_orders_for_tactical_drones_Dep_tt
+			}
+
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = UKR_orders_for_reconnaissance_drones
+		icon = GFX_UKR_orders_for_reconnaissance_drones
+		prerequisite = {
+			focus = New_era_of_war
+		}
+		x = 1
+		y = 1
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+			if = {
+				limit = { 
+					has_completed_focus = Underground_factories
+				}
+				add_equipment_to_stockpile = {
+					type = UKR_uav_recon_equipment_leleka
+					amount = 200
+				}
+			}
+			 else = {
+				add_equipment_to_stockpile = {
+					type = UKR_uav_recon_equipment_leleka
+					amount = 45
+				}		
+				custom_effect_tooltip = UKR_UKR_orders_for_tactical_drones_Dep_tt
+			}			
+			set_country_flag = UKR_orders_for_reconnaissance_drones
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = Bober
+		icon = Bober
+		prerequisite = {
+			focus = UKR_orders_for_tactical_drones
+		}
+		prerequisite = {
+			focus = UKR_orders_for_reconnaissance_drones
+		}
+		x = 0
+		y = 2
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus Bober"
+			custom_effect_tooltip = Bober_tt
+			hidden_effect = {
+				set_technology = {
+					missile_ukr_bober = 1
+				}
+				add_equipment_to_stockpile = {
+					type = ukr_guided_uav_bober
+					amount = 10
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = UKR_increase_national_UAV_production
+		icon = GFX_UKR_increase_national_UAV_production
+		prerequisite = {
+			focus = Bober
+		}
+		x = 2
+		y = 3
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+			add_ideas = {
+				UKR_increase_national_UAV_production
+			}
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = UKR_create_a_department_of_the_AFU_for_drones
+		icon = GFX_UKR_create_a_department_of_the_AFU_for_drones
+		prerequisite = {
+			focus = start_developing_an_analogue_of_shahed
+		}
+		x = 0
+		y = 4
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+			add_ideas = {
+				UKR_create_a_department_of_the_AFU_for_drones
+			}
+			hidden_effect = {
+				country_event = {
+					id = ukr_fpv.1
+					days = 14
+				}
+				country_event = {
+					id = ukr_fpv.2
+					days = 20
+				}
+				country_event = {
+					id = ukr_fpv.3
+					days = 25
+				}
+				country_event = {
+					id = ukr_fpv.4
+					days = 30
+				}
+			}			
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = start_developing_an_analogue_of_shahed
+		icon = start_developing_an_analogue_of_shahed
+		prerequisite = {
+			focus = Bober
+		}
+		x = 0
+		y = 3
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus start_developing_an_analogue_of_shahed"
+			custom_effect_tooltip = start_developing_an_analogue_of_shahed_tt
+			hidden_effect = {
+				set_technology = {
+					missile_ukr_rubaka = 1
+				}
+				add_equipment_to_stockpile = {
+					type = ukr_guided_uav_bober
+					amount = 10
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+		focus = {
+		id = UKR_smoking_gg
+		icon = GFX_UKR_smoking_gg
+		prerequisite = {
+			focus = start_developing_an_analogue_of_shahed
+		}
+		x = -2
+		y = 4
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+						
+		}
+		search_filters = {
+		}
+	}
+    focus = {
+		id = potuzhni_factories
+		icon = GFX_UKR_Subsequent_mobilization_to_bureaucrats
+		prerequisite = {
+			focus = New_era_of_war
+		}
+		x = 6
+		y = 1
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		available = {
+			has_full_control_of_state = 94
+			has_full_control_of_state = 95
+			has_full_control_of_state = 73
+			has_full_control_of_state = 86
+			has_full_control_of_state = 104
+			has_full_control_of_state = 106
+		}
+		completion_reward = {
+			94 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 8
+				}
+			}
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = podgotovka_dronovodov
+		icon = GFX_UKR_Subsequent_mobilization_to_bureaucrats
+		prerequisite = {
+			focus = New_era_of_war
+		}
+		x = 12
+		y = 1
+		relative_position_id = New_era_of_war
+		cost = 0.5
+		completion_reward = {
+		add_manpower = 5000
+		ensure_unit_template_UKR_zov = 1
+		hidden_effect = {
+				set_technology = {
+					tech_fpv3 = 1
+				}
+			}
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = brygada_madyara
+		icon = GFX_UKR_Subsequent_mobilization_to_bureaucrats
+		prerequisite = {
+			focus = podgotovka_dronovodov
+		}
+		x = 0
+		y = 1
+		relative_position_id = podgotovka_dronovodov
+		cost = 0.5
+		completion_reward = {
+		119 = {
+					create_unit = {
+						division = "name = \"1-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy_batalion_bespilotnyh_system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"2-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy_batalion_bespilotnyh_system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"3-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy_batalion_bespilotnyh_system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"4-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"5-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"6-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"7-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"8-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"9-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"10-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"11-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+					create_unit = {
+						division = "name = \"12-y elitniy batalion bespilotnyh system\" division_template = \"Elitniy batalion bespilotnyh system\" start_experience_factor = 0.6 start_equipment_factor = 1"
+						owner = UKR
+						prioritize_location = 547
+						count = 1
+					}
+				}
+		}
+		search_filters = {
+		}
+	}
+
 }

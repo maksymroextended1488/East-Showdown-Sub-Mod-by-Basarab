@@ -17,4 +17,4 @@ dependencies={
 picture="thumbnail.png"
 name="East Showdown Submod"
 supported_version="1.17.5.1"
-remote_file_id="3699186825"
+remote_file_id="3713678045"
